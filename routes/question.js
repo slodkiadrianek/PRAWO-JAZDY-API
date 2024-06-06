@@ -1,9 +1,13 @@
-import express from 'express'
-import { randomQuestion } from '../controler/questionController.js'
+import express from "express";
+import {
+  randomQuestion,
+  diffrentCateg,
+} from "../controler/questionController.js";
 
-const router = express.Router()
+const router = express.Router();
 
-router.get('/', randomQuestion)
+router.get("/", randomQuestion);
 
+router.get("/:categ", diffrentCateg);
 
-export default router
+export default router;

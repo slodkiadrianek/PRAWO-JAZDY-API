@@ -1,10 +1,26 @@
 import { downloadQuestion } from "../model/questionDownload.js";
 
 const randomQuestion = async (req, res, next) => {
-  const number = Math.trunc(Math.random() * 3549 + 1);
-  const question = await downloadQuestion(number);
+  let number;
+  let question;
+  while (!question) {
+    number = Math.trunc(Math.random() * 3549 + 1);
+    question = await downloadQuestion(number);
+  }
 
   res.json({ question: question });
 };
 
-export { randomQuestion };
+const diffrentCateg = async (req, res, next) => {
+  const categ = req.params.categ;
+  let number;
+  let question;
+  while (!question) {
+    number = Math.trunc(Math.random() * 3549 + 1);
+    question = await downloadQuestion(number, categ);
+  }
+
+  res.json({ question: question });
+};
+
+export { randomQuestion, diffrentCateg };
