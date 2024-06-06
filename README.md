@@ -7,9 +7,11 @@ https://prawo-jazdy-api.onrender.com/
 - Podana jest poprawna odpowiedź żeby od razu sprawdzić swoją więdze
 # Jak korzystać
 - np. https://prawo-jazdy-api.onrender.com/ - bez żadnego obiektu losuje się pytanie które obejmuje wszystkie kategorie.
-- ![image](https://github.com/slodkiadrianek/PRAWO-JAZDY-API/assets/136102234/5d85b91c-8fef-47d1-8ace-f32a6c3f8a60)
+
+   ![image](https://github.com/slodkiadrianek/PRAWO-JAZDY-API/assets/136102234/5d85b91c-8fef-47d1-8ace-f32a6c3f8a60)
 - https://prawo-jazdy-api.onrender.com/:Parametr
 - np. https://prawo-jazdy-api.onrender.com/B - Zwróci pytanie które ma kategorię B.
-- ![image](https://github.com/slodkiadrianek/PRAWO-JAZDY-API/assets/136102234/aa4e0423-c29b-4785-98fc-f795de660c9e)
+
+  ![image](https://github.com/slodkiadrianek/PRAWO-JAZDY-API/assets/136102234/aa4e0423-c29b-4785-98fc-f795de660c9e)
 
 
