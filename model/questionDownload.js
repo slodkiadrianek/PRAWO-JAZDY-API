@@ -2,13 +2,13 @@ import { questionsCollection, connectToDatabase } from "../utils/database.js";
 
 const downloadQuestion = async (num, categ = "A,B,C,D,T,AM,A1,A2,B1,C1,D1") => {
   try {
+    const categRegex = new RegExp(categ.replace(",", "*"));
     await connectToDatabase();
     let result;
     result = await questionsCollection.findOne({
       Lp: num,
-      Kategorie: categ,
+      Kategorie: categRegex,
     });
-    console.log(result);
     return result;
   } catch (error) {
     console.log(error);
