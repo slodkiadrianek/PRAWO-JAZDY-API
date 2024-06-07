@@ -1,12 +1,18 @@
 import { questionsCollection, connectToDatabase } from "../utils/database.js";
 
-const downloadQuestion = async (num, categ = "A,B,C,D,T,AM,A1,A2,B1,C1,D1") => {
+const downloadQuestion = async (num, categ) => {
   try {
-    const categRegex = new RegExp(categ.replace(",", "*"));
+    let categRegex;
+    if (categ) {
+      categRegex = new RegExp(categ.replace(",", "*"));
+    } else {
+      categRegex = { $exists: true };
+    }
     await connectToDatabase();
     let result;
     result = await questionsCollection.findOne({
       Lp: num,
+
       Kategorie: categRegex,
     });
     return result;
